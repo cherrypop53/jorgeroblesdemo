@@ -1,0 +1,92 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "version": 2,
+  "settings": {
+    "color": {
+      "custom": true,
+      "customGradient": true,
+      "customDuotone": true,
+      "palette": [
+        {
+          "name": "Negro",
+          "slug": "black",
+          "color": "#000000"
+        },
+        {
+          "name": "Blanco",
+          "slug": "white",
+          "color": "#ffffff"
+        }
+      ]
+    },
+    "typography": {
+      "customFontSize": true,
+      "fontSizes": [
+        {
+          "name": "Pequeño",
+          "slug": "small",
+          "size": "12px"
+        },
+        {
+          "name": "Normal",
+          "slug": "normal",
+          "size": "16px"
+        },
+        {
+          "name": "Grande",
+          "slug": "large",
+          "size": "32px"
+        }
+      ],
+      "lineHeight": true
+    },
+    "layout": {
+      "contentSize": "100%",
+      "wideSize": "100%"
+    }
+  },
+  "styles": {
+    "color": {
+      "background": "#ffffff",
+      "text": "#000000"
+    },
+    "typography": {
+      "fontSize": "16px",
+      "lineHeight": "1.6"
+    }
+  },
+  "templateParts": [
+    {
+      "name": "header",
+      "title": "Header",
+      "area": "header",
+      "description": "Encabezado principal del sitio."
+    },
+    {
+      "name": "footer",
+      "title": "Footer",
+      "area": "footer",
+      "description": "Pie de página del sitio."
+    }
+  ],
+  "templates": [
+    {
+      "name": "front-page",
+      "title": "Front Page",
+      "postTypes": [ "page" ],
+      "description": "Página de inicio personalizada."
+    },
+    {
+      "name": "page",
+      "title": "Página Genérica",
+      "postTypes": [ "page" ],
+      "description": "Plantilla genérica para páginas."
+    },
+    {
+      "name": "single",
+      "title": "Entrada Individual",
+      "postTypes": [ "post" ],
+      "description": "Plantilla para una entrada de blog."
+    }
+  ]
+}

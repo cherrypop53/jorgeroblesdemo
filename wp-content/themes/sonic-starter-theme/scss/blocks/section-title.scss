@@ -1,0 +1,31 @@
+.block-section-title {
+  @apply
+  flex
+  justify-center
+  flex-col
+  items-center
+  mb-[60px];
+
+  h2 {
+    @apply
+    relative
+    text-[clamp(32px,5vw,60px)]
+    m-0
+    text-black
+    leading-snug
+    font-semibold
+    text-center;
+
+    max-width: 60%;
+  }
+
+  p {
+    @apply
+    m-0
+    mb-[20px]
+    leading-[35px]
+    text-2xl
+    font-normal
+    text-center;
+  }
+}

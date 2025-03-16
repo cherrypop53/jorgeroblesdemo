@@ -1,0 +1,75 @@
+.block-card-vertical {
+  height: calc(100% - 2rem);
+  @apply
+  flex-col
+  bg-white
+  text-center
+  rounded-[20px]
+  shadow-[1px_2px_22px_-15px_rgba(66,68,90,1)];
+  .card-image {
+    height: 70%;
+    @apply
+    bg-cover
+    bg-no-repeat
+    w-full
+  }
+
+  .block-card-vertical-data {
+    height: 30%;
+    @apply
+    p-[20px]
+    text-left
+    relative;
+
+    h3 {
+      @apply
+      text-[24px]
+      font-medium
+      m-[5px_0];
+    }
+
+    p {
+      @apply
+      text-[16px]
+      text-[#010101];
+    }
+
+    &::after {
+      content: "";
+      @apply
+      block
+      w-[10px]
+      h-[10px]
+      mt-[10px]
+      absolute
+      right-[20px]
+      top-[30px];
+      background: url("./images/plusIcon.png") no-repeat center / cover;
+    }
+    .author{
+      display: grid;
+      gap: 10px;
+      margin-top: 10px;
+      grid-template-columns:40px 1fr ;
+      position: absolute;
+      top: -120px;
+      background: #FFFFFF;
+      padding: 10px;
+      border-radius: 50px;
+      padding-right: 20px;
+      h5{
+        color: #010101;
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 991px){
+  .block-card-vertical {
+    height: 420px;
+    .block-card-vertical-data{
+      height: 120px;
+    }
+  }
+}

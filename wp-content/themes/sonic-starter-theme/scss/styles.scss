@@ -1,0 +1,14 @@
+@use 'core/_html';
+@use 'core/_custom';
+@use 'fonts/clash-grotesk';
+
+// Importa Blocks styles
+@use 'blocks/header';
+@use 'blocks/section-title';
+@use 'blocks/text-and-image';
+@use 'blocks/card-vertical';
+@use 'blocks/card-horizontal';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

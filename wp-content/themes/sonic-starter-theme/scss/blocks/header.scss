@@ -1,0 +1,185 @@
+.block-header {
+  @apply
+  flex
+  justify-between
+  items-center
+  pt-[30px]
+  pb-0;
+
+  .menu-links {
+    @apply
+    ml-auto;
+
+    ul {
+      @apply
+      flex
+      items-center
+      justify-end;
+
+      li {
+        @apply
+        mr-[30px]
+        text-center;
+
+        a {
+          @apply
+          text-[16px];
+        }
+
+        &:hover {
+          @apply
+          font-medium
+          text-[#7b69e9];
+        }
+
+        &:hover::after {
+          content: "";
+          @apply
+          block
+          w-full
+          h-[10px]
+          bg-no-repeat
+          bg-contain;
+          background-image: url('../assets/images/underline.png');
+        }
+      }
+    }
+  }
+
+  .desk-cta {
+    @apply
+    px-[30px]
+    py-[15px]
+    border-2
+    border-[#F4AB1E]
+    rounded-[10px]
+    transition-all
+    duration-300;
+
+    &:hover {
+      @apply
+      bg-[#7b69e9]
+      text-white
+      border-[#7b69e9];
+    }
+  }
+
+  .hamburger-cta {
+    @apply
+    hidden;
+  }
+
+  .close-menu-cta {
+    @apply
+    hidden;
+  }
+}
+
+.mobile-menu-items {
+  @apply
+  hidden;
+}
+
+@media (max-width: 991px) {
+
+  header {
+    @apply
+    fixed
+    bg-white
+    z-[999]
+    w-full;
+  }
+
+  .block-header {
+    @apply
+    items-center;
+
+    .menu-links,
+    .desk-cta {
+      @apply
+      hidden;
+    }
+
+    .hamburger-cta {
+      @apply
+      flex
+      flex-col
+      cursor-pointer;
+
+      span {
+        @apply
+        block
+        w-[30px]
+        h-[5px]
+        mb-[6px]
+        bg-[#7b69e9];
+      }
+    }
+
+    .close-menu-cta {
+      @apply
+      rotate-45
+      cursor-pointer;
+
+      span {
+        @apply
+        text-[60px]
+        font-medium
+        text-[#7b69e9];
+      }
+    }
+  }
+
+  .mobile-menu-items {
+    @apply
+    flex
+    flex-col
+    ml-0
+    mr-0
+    mt-[10px];
+
+    .mobile-links {
+      @apply
+      pt-[30px]
+      pl-[30px]
+      flex-col
+      bg-[#7b69e9]
+      hidden;
+      height: calc(100% - 180px);
+      li {
+        @apply
+        mb-[30px];
+
+        a {
+          @apply
+          text-white;
+        }
+      }
+    }
+
+    .mob-cta {
+      @apply
+      flex
+      justify-center
+      items-center
+      w-full
+      h-[60px]
+      text-white
+      bg-[#F4AB1E]
+      cursor-pointer
+      transition-all
+      duration-300;
+
+      a {
+        @apply
+        font-semibold
+        text-[22px];
+      }
+
+      &:hover {
+        @apply
+        bg-[#7b69e9];
+      }
+    }
+  }
+}
